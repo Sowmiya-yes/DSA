@@ -1,0 +1,38 @@
+Functional Interface Java 8
+    decreased verbosity of the OO type of programming
+    Interface with only one abstract method
+    @FunctionalInterface - not mandatory, but if added, compile time error occurs when we try to add more than one abstract method
+    Funct Interfaces goes well with lambda expressions to give implementation
+    Which features used functional interfaces: Streams
+    java.util.function package - Consumer, Supplier, Function and Predicate
+    Eg: Runnable is a FI with one abstract method - run
+    It can contain default and static methods though
+    Runnable, Callable, Comparator, Comparable
+    Built in FI:
+    1. Function
+        takes a single parameter and returns a single value
+        eg. map takes a function
+        apply(), also some static and default methods
+        extended by UnaryOperator - used in places which takes an object, modifies it and returns the same
+    2. Predicate
+            takes a single parameter and returns a boolean value
+            eg. filter takes a function
+            test(), also some static and default methods
+    3. Supplier
+            takes no parameter and but supplies a value
+            eg. supplyAsync takes a function
+            get() only
+    4. Consumer
+            takes one parameter and returning void
+            ef: runAsync
+            accept() and 1 default method
+    5. BiFunction
+            takes two parameters and returns a result
+            This is extended by ----BinaryOperator---- used while implementing sum, multiply, subtract
+            apply()
+            eg. reduce in streams takes biFunction to reduce the values to one aggregated result
+    6. BiConsumer
+            takes two parameters and returns nothing
+            most forEach in Collections takes BiConsumer
+    7. BiPredicate
+        takes in two parameters, and returns boolean

@@ -1,0 +1,38 @@
+Streams introduced in Java 8
+    - brought in a functional programming style to the language but Java is not a functional programming language
+    - performs transformations on the collections
+    - how to create streams
+    - stream() and parallelStream() methods belong to Collections Interface
+    - intermediate and terminal
+
+    - forEach - terminal operation - takes consumer as argument (e) -> System.out::print
+    - map - intermediate operation - takes Function as argument (e) -> someFunction(e)
+    - filter - intermediate - takes predicate (e) -> e > 10
+    stream().
+    .filter()
+    firstFirst()
+    - stream().toArray[Employee[]::new]
+    - flatMap(Collections::stream]
+    - findFirst - terminal - takes nothing but returns optional - lazy evaluation ( computation performed only when terminal op is reached)
+        while intermediate operations are lazy and not evaluate
+    - collect - terminal - fold the elements in the stream -> takes in methods from Collectors interface
+
+ - flatMap -reduces nD list to 1D stream
+ - toArray
+ - peek - intermediate operation - acts like a map
+ - skip & limit - performs operations on infinite stream in finite amount of time - short circuit
+
+ - sorted - simply or pass comparator - short circuiting not applied
+ - min , max - gives optional - takes comparator - can use Comparator interface for objects
+ - distinct
+ - allMatch, anyMatch, noneMatch - anyMatch is short circuit
+
+ - IntStream, DoubleStream, LongStream - extends BaseStream
+ - created by IntStream.of() or Stream.mapToInt
+
+ -reduce - take in initial value and a function to be applied
+
+ - boxed
+ -count with peek
+ - findFirst().getAsInt()
+ - boxed().toArray(Integer[]::new)

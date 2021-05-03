@@ -1,0 +1,37 @@
+main thread ----> asyn task in seperate thread
+            <---- reports completion or error
+Good for writing non blocking code
+
+Future introduced in Java 5 (isDone and get), CompletionStage
+        | implements
+CompletableFuture Java 8
+
+Limitations:
+1. Cannot be completed manually
+2. without using get, you cant continue the operations
+3. chaining not possible
+4. combining results not possible
+5. No exception handling
+
+----------------------
+1. Creation
+2. runAsync, supplyAsync
+3. thenApply, thenAccept, thenRun
+
+What if callbacks are also async?
+thenApplyAsync, thenRunAsync thenRunAsync
+
+Where do they get executed?
+
+Part 2:
+1. How to overcome 4th limitation?
+what if callback returns completable future and you wanna flatten that?
+use thenCombine, thenCompose, thenAcceptBoth
+allOf, anyOf
+
+2. 5th limitation
+exceptionally
+handle
+
+
+
